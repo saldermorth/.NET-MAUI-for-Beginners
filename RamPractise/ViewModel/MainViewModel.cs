@@ -9,8 +9,9 @@ namespace RamPractise.ViewModel
     public partial class MainViewModel : ObservableObject
     {
         IConnectivity connectivity;
-        public MainViewModel()
+        public MainViewModel(IConnectivity _connectivity)
         {
+            connectivity = _connectivity;
             Items = new ObservableCollection<string>();
         }
 
